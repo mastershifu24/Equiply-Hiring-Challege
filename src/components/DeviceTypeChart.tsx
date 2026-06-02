@@ -34,7 +34,7 @@ export function DeviceTypeChart({ slices }: DeviceTypeChartProps) {
 
   return (
     <div className="chart-panel">
-      <ResponsiveContainer width="100%" height={320}>
+      <ResponsiveContainer width="100%" height={380}>
         <PieChart>
           <Pie
             data={slices}
@@ -60,6 +60,9 @@ export function DeviceTypeChart({ slices }: DeviceTypeChartProps) {
             }}
           />
           <Legend
+            layout="horizontal"
+            verticalAlign="bottom"
+            wrapperStyle={{ paddingTop: 16, lineHeight: '1.6' }}
             formatter={(value) => {
               const slice = slices.find((s) => s.device_type === value)
               return slice

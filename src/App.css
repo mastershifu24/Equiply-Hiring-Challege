@@ -134,15 +134,13 @@
 
 .dashboard {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1.25rem;
   margin-top: 1.5rem;
 }
 
-@media (max-width: 960px) {
-  .dashboard {
-    grid-template-columns: 1fr;
-  }
+.panel--wide {
+  min-width: 0;
 }
 
 .panel {
@@ -222,5 +220,7 @@ tbody tr:hover {
 }
 
 .chart-panel {
-  min-height: 320px;
+  min-height: 380px;
+  max-width: 720px;
+  margin: 0 auto;
 }

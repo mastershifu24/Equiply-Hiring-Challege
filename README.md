@@ -30,6 +30,12 @@ npx tsx scripts/enrich-cli.ts "C:\path\to\challenge_data-v1.csv"
 
 The app **Export** button and `npm run enrich` use the same enrichment logic and both produce `enriched.csv`.
 
+## Demo video
+
+https://youtu.be/YOUR_LINK
+
+Walkthrough: upload challenge CSV → enriched table + device-type chart → export `enriched.csv`.
+
 ## Push to GitHub
 
 ```powershell
@@ -86,7 +92,7 @@ Regenerates `src/data/device-types.json` from one batched OpenAI request.
 
 - [x] `enriched.csv` in repo root
 - [ ] All source code committed (no `.env`, no API keys)
-- [ ] Demo video link in README (if required by organizers)
+- [ ] Demo video link above (YouTube/Loom — replace `YOUR_LINK`)
 - [ ] GitHub repo URL + email + API key on Equiply form
 
 ## Build
