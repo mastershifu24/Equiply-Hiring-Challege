@@ -32,7 +32,7 @@ The app **Export** button and `npm run enrich` use the same enrichment logic and
 
 ## Demo video
 
-https://youtu.be/YOUR_LINK
+https://www.loom.com/share/b9da5e66daac4cd39e0b5650283521f2
 
 Walkthrough: upload challenge CSV → enriched table + device-type chart → export `enriched.csv`.
 
@@ -92,7 +92,7 @@ Regenerates `src/data/device-types.json` from one batched OpenAI request.
 
 - [x] `enriched.csv` in repo root
 - [ ] All source code committed (no `.env`, no API keys)
-- [ ] Demo video link above (YouTube/Loom — replace `YOUR_LINK`)
+- [x] Demo video link above
 - [ ] GitHub repo URL + email + API key on Equiply form
 
 ## Build
