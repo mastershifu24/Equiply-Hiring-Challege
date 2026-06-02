@@ -1,0 +1,6 @@
+manufacturer,model,serial_number,manufactured_date,device_type
+GE Healthcare,Voluson E10,,2018-06-12,Ultrasound
+Philips,IntelliVue MX800,,2014-03-22,Patient Monitor
+Medtronic,PB980 Ventilator,,2022-01-18,Ventilator
+Siemens Healthineers,MAGNETOM Vida,,2017-11-03,Imaging
+Baxter,SIGMA Spectrum,,2019-08-30,Infusion Pump
