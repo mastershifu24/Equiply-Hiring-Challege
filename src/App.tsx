@@ -96,11 +96,11 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div>
-          <p className="eyebrow">Equiply hiring challenge</p>
+          <p className="eyebrow">CSV enrichment</p>
           <h1>Hospital equipment enrichment</h1>
           <p className="lede">
             Upload equipment CSV, enrich with manufactured date and device type,
-            visualize distribution, and export sorted results.
+            visualize distribution, and export sorted results — all in the browser.
           </p>
         </div>
         <button
@@ -139,7 +139,7 @@ function App() {
             <span className="badge">{sortedRows.length} rows</span>
           </div>
           <p className="panel__sub">
-            Sorted ascending by manufactured date (submission requirement).
+            Sorted ascending by manufactured date.
           </p>
           <EquipmentTable rows={sortedRows} />
         </section>

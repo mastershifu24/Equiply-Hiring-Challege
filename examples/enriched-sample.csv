@@ -1,9 +1,9 @@
 manufacturer,model,serial_number,manufactured_date,device_type
-ZOLL Medical,AEDPlus,T15A00360162,2015-01-01,AED
 Philips,IntelliVue MP20,DE622A000543,1962-01-01,Patient Monitor
-Jiangmen Dacheng Medical Equipment Co.,IOB-507,WU201607061234,2016-07-06,Infant Incubator
+Masimo,Rad8,M081234567,2008-01-01,Pulse Oximeter
 Baxter Healthcare Corp.,Spectrum IQ,5123456789,2012-01-01,Infusion Pump
+ZOLL Medical,AEDPlus,T15A00360162,2015-01-01,AED
+Jiangmen Dacheng Medical Equipment Co.,IOB-507,WU201607061234,2016-07-06,Infant Incubator
 Hill Rom,CenturyP1400,H1820203,2018-01-01,Hospital Bed
 GE Healthcare,Apex Pro CH,SPX18ABC123,2018-01-01,Telemetry System
 Mindray,BeneVision N15,FS-190615-001,2019-06-15,Patient Monitor
-Masimo,Rad8,M081234567,2008-01-01,Pulse Oximeter

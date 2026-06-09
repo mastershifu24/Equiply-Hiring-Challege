@@ -1,9 +1,9 @@
 /**
- * One-shot OpenAI call for all unique manufacturer+model device types.
+ * Optional: batch-generate device_type labels via OpenAI for a CSV of equipment.
  *
- * Usage (PowerShell):
- *   $env:OPENAI_API_KEY = "sk-..."   # key from Equiply submission form
- *   node scripts/fetch-device-types.mjs "C:\path\to\challenge_data-v1.csv"
+ * Usage:
+ *   OPENAI_API_KEY=sk-... npm run fetch-types
+ *   node scripts/fetch-device-types.mjs path/to/equipment.csv
  *
  * Writes: src/data/device-types.json
  */
@@ -13,14 +13,14 @@ import { fileURLToPath } from 'url'
 import Papa from 'papaparse'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const root = path.join(__dirname, '..')
 const apiKey = process.env.OPENAI_API_KEY
 const inputPath =
-  process.argv[2] ??
-  path.join(process.env.USERPROFILE ?? '', 'Downloads', 'challenge_data-v1.csv')
-const outPath = path.join(__dirname, '../src/data/device-types.json')
+  process.argv[2] ?? path.join(root, 'public', 'sample-equipment.csv')
+const outPath = path.join(root, 'src/data/device-types.json')
 
 if (!apiKey) {
-  console.error('Set OPENAI_API_KEY first (the key from the Equiply submit form).')
+  console.error('Set OPENAI_API_KEY in your environment first.')
   process.exit(1)
 }
 

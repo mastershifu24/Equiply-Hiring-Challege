@@ -9,9 +9,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
 const inputPath =
-  process.argv[2] ??
-  path.join(process.env.USERPROFILE ?? '', 'Downloads', 'challenge_data-v1.csv')
-const outPath = path.join(root, 'enriched.csv')
+  process.argv[2] ?? path.join(root, 'public', 'sample-equipment.csv')
+const outPath =
+  process.argv[3] ?? path.join(root, 'examples', 'enriched-sample.csv')
 
 function normalizeHeader(header: string): string {
   return header.trim().toLowerCase().replace(/\s+/g, '_')
@@ -22,6 +22,13 @@ function parseDateSort(value: string): number {
   const t = Date.parse(value)
   return Number.isNaN(t) ? Infinity : t
 }
+
+if (!fs.existsSync(inputPath)) {
+  console.error('Input CSV not found:', inputPath)
+  process.exit(1)
+}
+
+fs.mkdirSync(path.dirname(outPath), { recursive: true })
 
 const text = fs.readFileSync(inputPath, 'utf8')
 const parsed = Papa.parse<Record<string, string>>(text, {
